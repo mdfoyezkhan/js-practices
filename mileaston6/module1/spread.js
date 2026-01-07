@@ -9,3 +9,6 @@ const friends = ['foyej khan', 'salman khan', 'emon khan'];
 console.log(...friends)
 const newArray = ['najmul khan', ...friends]
 console.log(...newArray)
+
+const numberss = [12, 23, 34, 56,67, 78,89];
+console.log(Math.max(...numberss))
