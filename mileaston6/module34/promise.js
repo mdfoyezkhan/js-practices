@@ -57,3 +57,23 @@ jsonPromise()
 .then(res =>res.json())
 .then(data => console.log(data))
 .catch(err => console.log(err))
+
+
+const person= ()=>{
+    return new Promise( (reslove, reject)=>{
+        const pCheck = true;
+        if(pCheck){
+            const personData={
+                json:()=>Promise.resolve({name:'nazmul islam khan'})
+            }
+            reslove(personData)
+        }
+        else{
+            reject('somthing wont wrong')
+        }
+    })
+}
+person()
+.then(res =>res.json())
+.then(data => console.log(data))
+.catch(err => console.log(err))
