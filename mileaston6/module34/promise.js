@@ -38,3 +38,22 @@ const secondPromise =()=>{
 secondPromise()
 .then(res =>console.log(res))
 .catch(err => console.log(err))
+
+const jsonPromise = ()=>{
+    return new Promise( (reslove, reject)=>{
+        const forCheck = true;
+        if(forCheck){
+            const jsonData={
+                json:()=> Promise.resolve({name:'emon khan'})
+            }
+            reslove(jsonData)
+        }
+        else{
+            reject('server not loading')
+        }
+    })
+}
+jsonPromise()
+.then(res =>res.json())
+.then(data => console.log(data))
+.catch(err => console.log(err))
